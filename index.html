@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AIBI Center - ارتباط با ما</title>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Vazirmatn', sans-serif;
+    }
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      text-align: center;
+      position: relative;
+      color: white;
+      overflow-x: hidden;
+      direction: rtl;
+    }
+
+    /* بک‌گراند گرادینت با بلور */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: linear-gradient(135deg,
+        #00ff88be,
+        #085ee0da,
+        #ff6d0bad
+      );
+      z-index: -2;
+    }
+    body::after {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      z-index: -1;
+    }
+
+    header {
+      padding: 40px 20px 20px;
+      position: relative;
+      z-index: 1;
+      opacity: 0;
+      transform: translateY(-30px);
+      animation: fadeInDown 1.2s ease forwards;
+    }
+    header img {
+      width: 100px;
+      border-radius: 50%;
+      padding: 6px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    }
+    header h1 {
+      margin: 20px 0 10px;
+      font-size: 2rem;
+      font-weight: 600;
+    }
+    header h2 {
+      margin: 0px 0 25px;
+      font-size: 1.2rem;
+      font-weight: normal;
+      opacity: 0.9;
+    }
+
+    .contact {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 25px;
+      padding: 5px;
+      position: relative;
+      z-index: 1;
+    }
+    .contact .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      width: 100%;
+      max-width: 500px;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1s ease forwards;
+    }
+    .contact .row:nth-child(1) {
+      animation-delay: 1s;
+    }
+    .contact .row:nth-child(2) {
+      animation-delay: 1.4s;
+    }
+    .contact a {
+      flex: 1 1 120px;
+      display: inline-block;
+      text-decoration: none;
+      font-size: 16px;
+      padding: 14px 25px;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(5px);
+      border: 1.5px solid rgba(255,255,255,0.4);
+      transition: all 0.3s ease;
+      color: white;
+      box-shadow: 0 8px 10px rgba(0,0,0,0.2);
+    }
+    .contact a:hover {
+      background: linear-gradient(135deg, #ffffff, #dddddd);
+      color: #222;
+      transform: translateY(-3px);
+    }
+
+    /* سکشن شماره تماس */
+    .phone {
+      margin-top: 20px;
+      padding: 18px;
+      font-size: 1.1rem;
+      background: rgba(255,255,255,0.15);
+      border-radius: 12px;
+      display: inline-block;
+      text-align: center;
+      max-width: 90%;
+      box-shadow: 0 7px 12px rgba(0,0,0,0.2);
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1s ease forwards;
+      animation-delay: 1.8s;
+    }
+    .phone p {
+      margin: 0 0 15px;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    .phone .numbers {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px 30px;
+    }
+    .phone a {
+      font-size: 1.05rem;
+      font-weight: bold;
+      text-decoration: none;
+      color: white;
+      transition: 0.3s;
+    }
+    .phone a:hover {
+      color: #ffffcc;
+    }
+
+    /* انیمیشن‌ها */
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    /* ریسپانسیو برای گوشی */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.7rem;
+      }
+      header h2 {
+        font-size: 1rem;
+      }
+      .contact a {
+        font-size: 14px;
+        padding: 12px 0;
+      }
+      .phone {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="1000014232-removebg-preview.png" alt="لوگو">
+    <h1>AIBI Center</h1>
+    <h2>با اراده شما و مدیریت و پشتکار ما آینده نو میسازیم</h2>
+    <h3>راه های ارتباطی با ما</h3>
+  </header>
+
+  <section class="contact">
+    <div class="row">
+      <a href="https://t.me/aibicenterofficial" target="_blank">✈️ تلگرام</a>
+      <a href="https://facebook.com/aibi.center" target="_blank">📘 فیسبوک</a>
+      <a href="https://instagram.com/aibicenter" target="_blank">📷 اینستاگرام</a>
+    </div>
+    <div class="row">
+      <a href="mailto:aibicenter.official@gmail.com" target="_blank">💼 جیمیل</a>
+      <a href="https://aibicenter.com/fa" target="_blank">🌐 وبسایت</a>
+      <a href="https://wa.me/96891365012" target="_blank">💬 واتساپ</a>
+    </div>
+
+    <!-- سکشن شماره تماس -->
+    <div class="phone">
+      <p>📞 برای تماس با ما</p>
+      <div class="numbers">
+        <a href="tel:+96891365012">دفتر مسقط : ‎+96891365012</a>
+        <a href="tel:+989910047045">دفتر مشهد : ‎+989910047045</a>
+        <a href="tel:+93788678710">دفتر کابل : ‎+93788678710</a>
+        <a href="tel:+9647743471449">دفتر بغداد : ‎+9647743471449</a>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
